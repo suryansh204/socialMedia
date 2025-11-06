@@ -1,42 +1,414 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+
+textarea {
+  min-height: 3rem;
+  max-height: 12.5rem;
+}
+
+.grid-column {
+  margin-bottom: 2rem !important;
+}
+
+.home-page-title {
+  display: block !important;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.form-container {
+  margin: auto;
+  max-width: 40rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.menu-bar-container {
+  margin-bottom: 1.5rem;
+}
+
+.create-post-error {
+  margin-bottom: 1.5rem !important;
+}
+
+.ui.teal.button:focus,
+.ui.teal.buttons .button:focus {
+  background-color: #00b5ad;
+}
+
+.ui.input.fluid {
+  margin-bottom: 1rem;
+}
+/* 
+Menu Bar
+@media only screen and (max-width: 440px) {
+  .responsive-menu {
+    flex-direction: column;
+    font-size: 1rem !important;
   }
-  to {
-    transform: rotate(360deg);
+
+  .theme-toggle-button {
+    width: 2rem !important;
+    min-height: 0.5rem !important;
+
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .ui.toggle.checkbox .box:before,
+  .ui.toggle.checkbox label:before {
+    width: 2.9rem;
   }
+
+  .ui.checkbox .box:after,
+  .ui.checkbox label:after {
+    height: 16px !important;
+    width: 16px !important;
+  }
+
+  .ui.checkbox .box:before,
+  .ui.checkbox label:before {
+    width: 2.6rem !important;
+    height: 16px !important;
+  }
+} */
+
+
+/* Profile Page */
+
+.profile-card {
+  margin-bottom: 1.5rem;
 }
 
-.card {
-  padding: 2em;
+.edit-button {
+  position: absolute;
+  top: 0.8rem;
+  right: 0.8rem;
 }
 
-.read-the-docs {
-  color: #888;
+.profile-picture-container img {
+  border: 1px solid rgb(223, 222, 222);
+  box-shadow: 0 0px 8px 2px rgb(0 0 0 / 6%), 0 0px 20px 4px rgb(0 0 0 / 4%);
+  border-radius: 50% !important;
+  height: 170px;
+  width: 170px;
+  margin: auto;
+}
+
+.profile-picture-container .post {
+  height: 145px;
+  width: 145px;
+}
+
+.profile-pic-button {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.custom-file-upload {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.profile-stats {
+  margin-top: 1.5rem !important;
+}
+
+/* Comment Section */
+
+.comment-like-button {
+  color: rgba(109, 109, 109, 0.534) !important;
+}
+
+.comment-like-button:hover {
+  /* color: rgba(31, 31, 31, 0.692) !important; */
+  filter: brightness(10%);
+}
+
+.comment-liked-button {
+  color: #20B2AA !important;
+}
+
+.comment-liked-button:hover {
+  filter: brightness(75%);
+}
+
+.ui.comments {
+  max-width: none;
+}
+
+
+/* Postcard Header & Metadata */
+
+.ui.card .header a {
+  color: black;
+}
+
+.ui.card .header a:hover {
+  text-decoration: underline;
+}
+
+.ui.card .meta:hover {
+  text-decoration: underline;
+}
+
+
+/* Comments Profile Link */
+
+.ui.comments .author {
+  color: black !important;
+}
+
+.ui.comments .author:hover {
+  text-decoration: underline;
+}
+
+
+/* Zoom Slider */
+
+.zoom-text {
+  text-align: left;
+}
+
+.zoom-slider {
+  width: 75% !important;
+  margin: 0 auto 1rem;
+}
+
+.rc-slider-handle {
+  background-color: rgb(88, 160, 255) !important;
+  border: solid 2px rgb(88, 160, 255) !important;
+  opacity: 1;
+  width: 18px !important;
+  height: 18px !important;
+  margin-top: -7px !important;
+}
+
+.rc-slider-track {
+  background-color: rgb(134, 185, 252) !important;
+}
+
+.rc-slider-handle-dragging.rc-slider-handle-dragging.rc-slider-handle-dragging {
+  box-shadow: none !important;
+}
+
+
+/* Semantic UI Icons */
+.ui.button:not(.icon)>.icon:not(.button):not(.dropdown) {
+  margin: 0;
+}
+
+/* Text bodies keep new lines */
+.text-body {
+  white-space: pre-wrap;
+}
+
+/* Theme Toggle Button */
+.theme-toggle-button {
+  margin: 0 0.4rem;
+}
+
+/* Inline styling */
+.inline-text {
+  display: inline;
+}
+
+/* Grid */
+.page-container {
+  margin: auto !important;
+  /* max-width: 68rem !important; */
+  padding: 0 7% !important;
+}
+
+/* Cards */
+.ui.card {
+  word-wrap: break-word
+}
+
+
+
+
+/* -----------------------------------------*/
+/*---- LIGHT MODE & DARK MODE STYLING ------*/
+/* -----------------------------------------*/
+
+
+/* --- LIGHT --- */
+
+#light {
+  min-height: 100vh;
+}
+
+#light .ui.label,
+#light .ui.pointing.label:before,
+#light .ui.button {
+  transition: none !important;
+}
+
+
+/* --- DARK --- */
+
+#dark {
+  background-color: #1e1f20;
+  min-height: 100vh;
+}
+
+#dark .modal-components {
+  background-color: rgb(173, 173, 173) !important;
+}
+
+/* Menu Bar */
+#dark .item {
+  color: rgb(223, 223, 223);
+}
+
+#dark .ui.secondary.pointing.menu {
+  border-bottom: 2px solid rgba(182, 187, 192, 0.15)
+}
+
+#dark input,
+#dark textarea {
+  background: #434446;
+  color: rgb(223, 223, 223);
+}
+
+/* PostForm */
+#dark h1,
+#dark h2,
+#dark h3,
+#dark h4,
+#dark h5,
+#dark h6,
+#dark p {
+  color: rgb(223, 223, 223);
+}
+
+/* Cards */
+
+#dark .card {
+  background-color: #2a2b2c;
+}
+
+#dark .ui.card,
+.ui.cards>.card {
+  box-shadow: 0 1px 3px 0 #242526, 0 0 0 1px #242526;
+}
+
+#dark h1,
+#dark .header,
+#dark .description {
+  color: rgb(223, 223, 223);
+}
+
+#dark .meta {
+  color: rgb(121, 121, 121);
+
+}
+
+#dark .ui.card>.extra,
+.ui.cards>.card>.extra {
+  border-top-color: #434648 !important;
+}
+
+/* PostCard Header */
+#dark .ui.card .header a {
+  color: rgb(223, 223, 223);
+}
+
+/* Like Button */
+
+#dark .ui.basic.teal.button,
+.ui.basic.teal.buttons .button {
+  color: #03645f !important;
+}
+
+#dark .ui.teal.button,
+.ui.teal.buttons .button {
+  background-color: #03645f;
+}
+
+#dark .ui.teal.button:focus,
+.ui.teal.buttons .button:focus {
+  background-color: #03645f;
+}
+
+/* Label on Like & Comment Buttons */
+
+#dark .ui.basic.label {
+  background-color: #2a2b2c !important;
+}
+
+#dark .ui.label,
+#dark .ui.pointing.label:before,
+#dark .ui.button {
+  transition: none !important;
+}
+
+/* Login & Register pages */
+#dark .field label {
+  color: rgb(223, 223, 223);
+}
+
+/* Error messages */
+
+#dark .ui.attached.error.message,
+#dark .ui.error.message {
+  box-shadow: 0 0 0 1px #c4bbbb inset, 0 0 0 0 transparent;
+}
+
+#dark .ui.error.message {
+  background-color: #b15d5dc9;
+}
+
+#dark .list {
+  color: white;
+}
+
+/* Single Post Page */
+
+#dark .ui.card>.content,
+.ui.cards>.card>.content {
+  border-top: 1px solid #434648;
+}
+
+#dark .ui.card .comment .author,
+#dark .ui.card .comment .text {
+  color: rgb(223, 223, 223) !important;
+}
+
+#dark .ui.card .comment .metadata {
+  color: rgba(223, 223, 223, .5);
+}
+
+#dark .comment-like-button {
+  filter: brightness(65%);
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+#dark .comment-like-button:hover {
+  filter: brightness(100%);
+}
+
+#dark .comment-liked-button {
+  color: #20B2AA !important;
+}
+
+/* Profile Page */
+
+#dark .profile-picture-container img {
+  border: 1px solid rgb(68, 68, 68);
+  box-shadow: 0 0px 8px 2px rgba(168, 168, 168, 0.07), 0 0px 20px 4px rgba(109, 108, 108, 0.05);
+  border-radius: 50% !important;
+}
+
+/* Form Loading Spinner */
+#dark .ui.loading.form:before {
+  background: #1e1f205d !important;
+}
+
+
+/* Modals */
+.ui.basic.modal input,
+.ui.basic.modal textarea {
+  background: #434446 !important;
+  color: rgb(223, 223, 223) !important;
 }
